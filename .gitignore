@@ -1,0 +1,5 @@
+build/
+dist/
+server/key_logger.txt
+ico.ico
+*.spec
